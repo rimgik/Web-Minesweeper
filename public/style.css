@@ -1,0 +1,202 @@
+@font-face {
+    font-family: slkscr;
+    src: url("./assests/slkscr.ttf")
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url("./assests/Poppins-Regular.ttf");
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: "slkscr";
+    text-align: center;
+    background-color: white;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+button {
+    font-family: "slkscr";
+}
+
+label {
+    font-family: "slkscr";
+    font-size: 15px;
+}
+
+pre {
+    font-family: "slkscr";
+}
+
+.header {
+    border-bottom: 4px solid transparent;
+    border-image: url("./assests/border.png");
+    border-image-slice: 9 9 9 9;
+    border-image-width: 15px 15px 15px 15px;
+    border-image-repeat: stretch stretch;
+    background-color: rgb(192, 192, 192);
+    flex: 0 0 90px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.settings {
+    margin-top: 10px;
+    border: 15px solid transparent;
+    height: 720px;
+    background-color: rgb(220, 220, 220);
+    border-image: url("./assests/border.png");
+    border-image-slice: 9 9 9 9;
+    border-image-width: 15px 15px 15px 15px;
+    border-image-repeat: stretch stretch;
+}
+
+.game {
+    width: 850px;
+    height: 750px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    border-image-width: 5px 5px 5px 5px;
+    border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent) 1;
+    overflow: hidden;
+}
+
+.game-area {
+    flex: 1;
+    background-color: rgb(192, 192, 192);
+    border: 15px solid transparent;
+    border-image: url("./assests/border.png");
+    border-image-slice: 9 9 9 9;
+    border-image-width: 15px 15px 15px 15px;
+    border-image-repeat: stretch stretch;
+}
+
+#board {
+    width: 100%;
+    height: 100%;
+}
+
+#new-game-button {
+    width: 52px;
+    height: 52px;
+    background: none;
+}
+
+#hint-button {
+    width: 52px;
+    height: 52px;
+    background: none;
+    transform: translateX(-24px);
+}
+
+.button {
+    width: 52px;
+    height: 52px;
+    border: none;
+    padding: 0;
+    margin-top: 20px;
+    object-fit: cover;
+    object-position: center; 
+    -webkit-user-drag: none; 
+    background: none;
+}
+
+#new-game-button:active {
+    content: url("./assests/smile_pressed.png")
+}
+
+#hint-button:active {
+    content: url("./assests/bulb_pressed.png")
+}
+
+.bomb-counter {
+    margin-top: 22px;
+    margin-left: 22px;
+    display: flex;
+}
+
+.bomb-counter img {
+    width: 26px;
+    height: 46px;
+}
+
+.section {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.select-button {
+    padding: 5px 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+    color: black;
+    border-image: url("./assests/border.png");
+    border-image-slice: 9 9 9 9;
+    border-image-width: 4px 4px 4px 4px;
+    border-image-repeat: stretch stretch;
+    background-color: rgb(192, 192, 192);
+}
+
+.select-button:hover {
+    background-color: rgb(150, 150, 150);
+}
+
+.select-button.selected {
+    background-color: rgb(240, 240, 240);
+}
+
+.custom-size {
+    margin-top: 5px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.custom-size input {
+    width: 50px;
+    padding: 5px;
+    font-size: 13px;
+}
+
+/* hide input number arrow*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+input[type="number"] {
+    font-family: "slkscr";
+    border: 4px solid rgb(180, 180, 180); /* Default border color */
+    border-radius: 0; /* Remove border radius */
+    caret-color: transparent; /* Hide the blinking cursor */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+input[type="number"]:focus {
+    outline: none; /* Remove the default outline */
+    border-color: black; /* Change border color to blue on focus */
+    border: 4px solid black; /* Change border color to green */
+    box-shadow: none; /* Remove any box-shadow */
+}

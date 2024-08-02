@@ -1,0 +1,68 @@
+<!Doctype html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport", content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <link rel="icon" href="./public/assests/icon.jpg">
+    <link rel="stylesheet" href="./public/style.css">
+
+</head>
+
+<html>
+<body>
+<div class="settings"> 
+    <img src="./public/assests/icon.jpg" width="100px" height="auto" style="margin-top: 10px;">
+    <div class="section">
+        <h2 style="margin-top: 3px; margin-bottom: 5px; margin-right: 0px; align-self: flex-start; font-family: slkscr">Difficulty:</h2>
+        <div class="button-container" id="difficulty-container">
+            <button class="select-button selected" id="easy">Easy</button>
+            <button class="select-button" id="medium">Medium</button>
+            <button class="select-button" id="hard">Hard</button>
+        </div>
+    </div>
+    <div class="section">
+        <h2 style="margin-top: 3px; margin-bottom: 5px; margin-right: 0px; align-self: flex-start; font-family: slkscr">Size:</h2>
+        <div class="button-container" id="size-container">
+            <button class="select-button" id="small">Small</button>
+            <button class="select-button selected" id="medium">Medium</button>
+            <button class="select-button" id="large">Large</button>
+            <button class="select-button" id="custom">Custom</button>
+        </div>
+        <div class="custom-size" id="custom-size" style="display: none;">
+            <div style="padding: 5px;">
+                <label for="width">Width :</label>
+                <input type="number" id="width" min="1" max="255" step="1">
+            </div>
+            <div style="padding: 5px;">
+                <label for="height">Height:</label>
+                <input type="number" id="height" min="1" max="255" step="1">
+            </div>
+        </div>
+    </div>
+    <div class="section" style="text-align: left;">
+                <p style="font-family: Poppins-regular; margin-top: 0px; font-size: 13px">Right Drag : Move Camera<br>Scroll Wheel : Zoom<br>Hints:<br> Green = Safe<br>Yellow = High probability of being safe <br> Red = Mine
+        </p>
+    </div>
+</div>
+<div class = "game" oncontextmenu="return false;" draggable="false" id="game">
+    <div class="header">
+        <div class="bomb-counter">
+            <img src="./public/assests/0.png" id="digit1">
+            <img src="./public/assests/0.png" id="digit2">
+            <img src="./public/assests/0.png" id="digit3">
+        </div>
+        <button class="button"><img src="./public/assests/smile.png" id="new-game-button"></button>
+        <button class="button"><img src="./public/assests/bulb.png" id="hint-button"></button>
+    </div>
+    <div class="game-area">
+        <canvas id="board">
+    </div>
+</div>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/underscore@1.13.6/underscore-umd-min.js"></script>
+<script type="module" src="./public/app.js"></script>
+</html>
+
